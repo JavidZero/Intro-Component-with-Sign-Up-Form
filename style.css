@@ -1,0 +1,198 @@
+:root {
+    
+    /* Colors */
+
+    /* Primary */
+
+    --red: hsl(0, 100%, 74%);
+    --green: hsl(154, 59%, 51%);
+
+    /* Accent */
+
+    --blue: hsl(248, 32%, 49%);
+
+    /* Neutral */
+
+    --dark-blue: hsl(249, 10%, 26%);
+    --grayish-blue: hsl(246, 25%, 77%);
+}
+
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: inherit;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.6rem;
+}
+
+.container {
+    max-width: 144rem;
+    width: 100%;
+    min-height: 100vh;
+    padding: 2rem;
+    margin: 0 auto;
+
+    background-color: var(--red);
+    background-image: url("images/bg-intro-desktop.png");
+    background-size: cover;
+    background-position: center center;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 7.5rem;
+}
+
+.left {
+    max-width: 50rem;
+    width: 100%;
+}
+
+.left h1 {
+    font-weight: 700;
+    font-size: 4rem;
+    max-width: 40rem;
+    color: white;
+}
+
+.left p {
+    font-weight: 400;
+    color: white;
+}
+
+.right {
+    max-width: 54rem;
+    width: 100%;
+}
+
+.form-box {
+    width: 100%;
+    min-height: 47rem;
+    padding: 4rem 2rem 1rem 2rem;
+    background-color: white;
+    border: none;
+    border-radius: 1rem;
+    box-shadow: 0 .3rem 0 rgba(0, 0, 0,0.2);
+
+    font-family: inherit;
+}
+
+.btn {
+    font-family: inherit;
+    font-weight: 500;
+    width: 100%;
+    padding: 1.5rem 4rem;
+    border: none;
+    border-radius: .5rem;
+    box-shadow: 0 .3rem 0 rgba(0, 0, 0,0.2);
+    color: white;
+}
+
+.btn:focus,
+.btn:active {
+    outline: none;
+}
+
+.try__free {
+    background-color: var(--blue);
+    padding: 1.5rem 8rem;
+    margin-bottom: 2rem;
+}
+
+.try__free span {
+    font-weight: 400;
+    color: var(--grayish-blue);
+}
+
+.submit {
+    background-color: var(--green);
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+
+.form-control {
+    width: 100%;
+    margin-bottom: 2rem;
+    text-align: right;
+    position: relative;
+}
+
+.form-control::after {
+    content: '';
+    width: 1rem;
+    height: 1rem;
+    background-image: url("images/icon-error.svg");
+    background-size: cover;
+
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+
+    display: none;
+}
+
+.form-control.error::after {
+    display: block;
+}
+
+.form-control input {
+    width: 100%;
+    height: 5rem;
+    padding: 1rem 2rem;
+    margin-bottom: .2rem;
+    border: 1px solid rgba(0, 0, 0,0.2);
+    border-radius: .5rem;
+    outline: none;
+    font-weight: 600;
+}
+
+.form-control input:focus {
+    outline: none;
+    border: 1px solid var(--dark-blue);
+}
+
+.form-control label {
+    font-size: 1rem;
+    font-style: italic;
+    color: var(--red);
+    text-align: right;
+    display: none;
+}
+
+.form-control.error label {
+    display: block;
+}
+
+.terms {
+    margin-top: 1rem;
+    text-align: center;
+    font-size: 1.4rem;
+}
+
+.terms span {
+    color: var(--red);
+    font-weight: 700;
+}
+
+
+@media only screen and (max-width: 650px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .left {
+        text-align: center;
+    }
+
+    .try__free span {
+}
